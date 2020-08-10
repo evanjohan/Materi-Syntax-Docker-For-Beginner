@@ -1,0 +1,5 @@
+#Create Volume:
+  - docker create -v /var/lib/mysql --name mysqldata mysql:latest
+
+#Run Container use Volume:
+  - docker container run --name mysqldb -p 3307:3306 --volumes-from mysqldata -e MYSQL_ROOT_PASSWORD=root -d mysql:latest

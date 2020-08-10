@@ -1,0 +1,26 @@
+# Show Images Docker
+	- Docker Images
+
+# Get Images Docker (Lihat di Docker Hub):
+	- Docker pull <nama_Docker:version>
+	
+# Delete Images Docker:
+	- Docker image rm <image_id>
+	- Docker rmi <image_id>
+	
+# Show List Container Docker:
+	- Docker container ls (yang sedang running)
+	- Docker container ls --all (running / tidak running)
+	- Docker container ps -a (running/tidak running)
+
+# Create Container :
+	- Docker container create --name mongoDB mongo:4.2
+	
+# Start Container :
+	- Docker container start mongoDB <nama_Docker/image_id>
+
+# Delete Container :
+	- Docker container rm <nama_Docker /image_id>
+
+# Stop Container :
+	- Docker container stop <nama_Docker/image_id>

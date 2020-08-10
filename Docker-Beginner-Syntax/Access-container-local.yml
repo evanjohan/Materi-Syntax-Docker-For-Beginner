@@ -1,0 +1,23 @@
+# Setelah container running, mau akses container (mongodb):
+    - Docker exec -it <nama_images> bin/Sh
+
+# Mongodb:
+    - mongo --host localhost --port 27017
+
+# Switch DB:
+    - use belajar (switch db)
+
+# Create Collection:
+    - db.createCollection("BasicCoding")
+
+# Show collection:
+    - show collections
+
+# Show DB:
+    - show databases
+
+# Delete DB:
+    - db.dropDatabase()
+
+
+

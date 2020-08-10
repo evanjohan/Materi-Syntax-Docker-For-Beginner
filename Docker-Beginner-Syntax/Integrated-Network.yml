@@ -1,0 +1,19 @@
+# Show Network:
+  - Docker network --help
+
+# Create Network:
+  - docker network create java-spring-mysql
+
+
+# Connect Network:
+  - docker network connect java-spring-mysql mysqldb
+  # ket:
+      - Nama network: java-spring-mysql
+      - Nama Container: mysqldb
+    - connectkannya 1 persatu
+
+# Show network Connect:
+  - docker container inspect mysqldb
+
+# Create container mysql direct network:
+  - docker container run --name mysqldb --network java-spring-mysql -p 3307:3306 --volumes-from mysqldata -e MYSQL_ROOT_PASSWORD=root -d mysql:latest

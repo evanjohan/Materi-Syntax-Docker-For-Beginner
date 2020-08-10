@@ -1,0 +1,11 @@
+# Build Image from docker-file :
+    - docker build --tag <name:version> .
+    - docker build --tag docker-golang:1.0 .
+
+# Upload Image to Registry (dockerhub):
+    # Create Image same to dockerhub:
+        - docker tag local-image:tagname reponame:tagname
+    # Push to Registry:
+        - docker push reponame:tagname
+    # For access denied push image to registry:
+        - docker login

@@ -1,0 +1,13 @@
+# create image and run container:
+  - Docker-compose up -d
+  # Ket:
+    -d : running in background
+
+# Start container :
+  - Docker-compose start
+    
+# Stop container:
+  - Docker-compose stop
+
+# remove container:
+  - Docker-compose down

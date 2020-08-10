@@ -1,0 +1,6 @@
+# Expose Port akses:
+    - Docker container create --name mongodb -p 27018:27017 mongo:4.2
+
+# Ket:
+    ( -p untuk open port, 27018:Port yang bisa diakses,27017 images)
+    
