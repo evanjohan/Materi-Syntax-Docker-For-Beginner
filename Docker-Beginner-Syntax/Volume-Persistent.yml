@@ -1,5 +1,14 @@
-#Create Volume:
+#Create dan run container  Volume:
   - docker create -v /var/lib/mysql --name mysqldata mysql:latest
 
-#Run Container use Volume:
+#Run Container use volume other container:
   - docker container run --name mysqldb -p 3307:3306 --volumes-from mysqldata -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+
+#Create volume:
+  - docker volume create mysqldata
+#Run Container volume data as is:
+  - docker  run  --name mysqldb -p 3307:3306 -v ./mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d  mysql:latest
+
+#Bind data in local komputer:
+  # Windows :
+  - docker  run  --name mysqldb -p 3307:3306 -v D:\mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d  mysql:latest
